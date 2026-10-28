@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+         
+
+            h1 {
+                font-family: Helvetica, Geneva, Arial;
+                color: red;
+                font-size: 26px;
+            }
+            h2 {
+                    color: violet;
+            }
+
+            /* Pantallas de 801px en adelante */
+            body {
+                background-color: #FADADD; 
+            }
+            @media (max-width: 800px) and (min-width: 550px)
+            {
+                body { background-color: #f4c58f; }
+
+                h1 {font-family: Helvetica, Geneva, Arial;
+                    color: rgb(98, 0, 255);
+                    font-size: 70px}
+                h2 {
+                    color: rgb(255, 36, 36);
+                }
+            }
+            
+            @media (max-width: 550px)
+            {
+                body {background-color: #aaebff;}
+
+                h1 {font-family: Helvetica, Geneva, Arial;
+                    color: red;
+                    font-size: 50px;}
+            }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Cedomio Marin Eduardo Maximiliano</h1>
+    <h2>Bienvenido a la página</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt necessitatibus molestias itaque, incidunt dignissimos praesentium assumenda fuga debitis cumque voluptas, enim deleniti adipisci consequuntur? Inventore accusantium laudantium aperiam necessitatibus nisi minus eum at nam laborum? Dolorem debitis tenetur quia totam ratione harum, rem repellat itaque animi hic, delectus doloribus alias?</p>
+</body>
+</html>

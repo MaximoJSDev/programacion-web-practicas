@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+      }
+      iframe {
+        flex: 1;
+        border: 0;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Menú vertical a la izquierda -->
+    <nav class="menu-lateral">
+      <h3>Proyectos</h3>
+      <ul>
+        <li>
+          <a href="../Practica1/index.html" target="frameProyecto">Proyecto 1</a>
+        </li>
+        <li>
+          <a href="../Practica2/index.html" target="frameProyecto">Proyecto 2</a>
+        </li>
+        <li>
+          <a href="../Practica3/index.html" target="frameProyecto">Proyecto 3</a>
+        </li>
+        <li>
+          <a href="../Practica4/index.html" target="frameProyecto">Proyecto 4</a>
+        </li>
+        <li>
+          <a href="../Practica5/index.html" target="frameProyecto">Proyecto 5</a>
+        </li>
+        <li>
+          <a href="../Practica6/index.html" target="frameProyecto">Proyecto 6</a>
+        </li>
+        <li>
+          <a href="../Practica7/index.html" target="frameProyecto">Proyecto 7</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Iframe donde se cargan los proyectos -->
+    <iframe name="frameProyecto" src="../Practica1/index.html" title="Proyecto"></iframe>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+body {
+  font-size: 16px;
+  font-family: "Lato";
+}
+h1,
+h2,
+h3 {
+  font-family: "Oswald";
+}
+h1 {
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  border: 2px solid yellow;
+}
+h2,h3 {
+  color: red;
+  text-align: center;
+  font-size: 32px;
+}
+
+select,
+textarea,
+input[type="text"],
+[type="email"],
+[type="password"] {
+  width: 400px;
+  background-color: rgba(0, 81, 255, 0.32);
+  border-radius: 2px;
+}
+input[type="submit"] {
+  background-color: #00b3ff;
+  padding: 7px 15px;
+  border-radius: 10px;
+  border: none;
+}
+input[type="checkbox"],
+[type="radio"] {
+  accent-color: yellow;
+}

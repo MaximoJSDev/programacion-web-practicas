@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obtener más información</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Clarity+City:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #ebecf1;
+      }
+      main {
+        max-width: 592px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+      }
+      div {
+        display: flex;
+        align-items: center;
+      }
+      a {
+        background: #684cff;
+        padding: 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 14px;
+        color: #fff;
+        margin-top: 4px;
+        margin-right: 16px;
+        font-family: "Clarity City", sans-serif;
+      }
+      h1 {
+        font-size: 32px;
+        margin-top: 40px;
+        margin-bottom: 32px;
+        font-family: "Rubik", sans-serif;
+      }
+      td {
+        font-family: "Clarity City", sans-serif;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        max-width: 400px;
+        padding: 8px;
+        background-color: #fff;
+        border-radius: 4px;
+        font-family: "Syne", sans-serif;
+        font-size: 16px;
+        border: 1px solid #80808073;
+        width: 100%;
+      }
+      input[type="submit"] {
+        padding: 10px 16px;
+        background-color: #0085c8;
+        color: #fff;
+        border: none;
+        display: flex;
+        font-size: 16px;
+        justify-self: self-end;
+        border-radius: 4px;
+        margin-top: 15px;
+      }
+      table td {
+        padding: 8px;
+      }
+
+      /* ==========================================
+         MEDIA QUERIES PARA ADAPTACIÓN A TELÉFONOS
+         ================================---------- */
+
+      /* 1. Pantallas medianas / tablets pequeñas (hasta 768px) */
+      @media (max-width: 768px) {
+        body {
+          background-color: #dfe2ee; /* Cambio ligero de color de fondo */
+        }
+        main {
+          max-width: 100%;
+          padding: 0 15px;
+        }
+        h1 {
+          font-size: 26px;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+      }
+
+      /* 2. Pantallas de teléfonos móviles pequeños (hasta 480px) */
+      @media (max-width: 480px) {
+        body {
+          background-color: #d4d8ec; /* Cambio de fondo más notorio en móvil */
+        }
+        div {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        a {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+        h1 {
+          font-size: 22px;
+          color: #3322aa; /* Cambio de color en el título para notar el cambio */
+        }
+        table,
+        tbody,
+        tr,
+        td {
+          display: block;
+          width: 100%;
+        }
+        td {
+          padding: 6px 0;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <main>
+        <div>
+          <a href="/index.html"> <- Volver al inicio </a>
+          <h1>Obtener más información</h1>
+        </div>
+        <table>
+          <tbody>
+            <tr>
+              <td>Ingresa tu Nombre:</td>
+              <td><input type="text" placeholder="richico" /></td>
+            </tr>
+            <tr>
+              <td>Ingresa tu Apellido:</td>
+              <td><input type="text" placeholder="Lopez" /></td>
+            </tr>
+            <tr>
+              <td>Información:</td>
+              <td>
+                <textarea name="" id=""></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td>Ingresa tu correo:</td>
+              <td><input type="email" placeholder="coreo@gmail.com" /></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <input type="submit" value="Enviar datos" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+    </center>
+  </body>
+</html>

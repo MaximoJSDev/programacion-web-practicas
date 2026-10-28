@@ -1,0 +1,94 @@
+<!-- Eduardo Maximiliano Cedomio Marin
+Programacion Web
+Hora: 8:00 a 9:00 -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sueldos de trabajadores</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 40px 20px;
+        background: #f3f4f6;
+        color: #1f2937;
+        font-family: Arial, sans-serif;
+      }
+
+      table {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0 2px 8px #00000014;
+      }
+
+      td,
+      th {
+        padding: 12px 14px;
+        border: 1px solid #d1d5db;
+        text-align: left;
+      }
+      th {
+        background: #3b82f6;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1" id="tabla">
+      <tr>
+        <th>*</th>
+        <th>nombre</th>
+        <th>dias tabajados</th>
+        <th>Antiguedad</th>
+        <th>Tiene Bono</th>
+        <th>Bono</th>
+        <th>Sueldo total</th>
+      </tr>
+    </table>
+    <script>
+      let nombre = prompt("Dame el nombre: ");
+      let dias_trabajados = Number(prompt("Dias trabajado: "));
+      let antiguedad = Number(prompt("Ingrese antiguedad"));
+      let sueldo_base = 15000;
+      let bono = 1000;
+      let tiene_bono = "";
+      let sueldo_quincena = (sueldo_base / 15) * dias_trabajados;
+
+      if (antiguedad >= 10) {
+        tiene_bono = "si";
+        sueldo_quincena = sueldo_quincena + bono;
+      } else {
+        tiene_bono = "no";
+      }
+      document.getElementById("tabla").innerHTML += `
+            <tr> 
+                <td>1</td>
+                <td>${nombre}</td>
+                <td>${dias_trabajados}</td>
+                <td>${antiguedad} años</td>
+                <td>${tiene_bono}</td>
+                <td>$ ${tiene_bono === "si" ? bono : "—"}</td>
+                <td>$ ${sueldo_quincena}</td>
+            </tr>`;
+
+      for (let x = 2; x <= 4; x++) {
+        document.getElementById("tabla").innerHTML += `
+             <tr>
+                <td>${x}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+             </tr>
+            `;
+      }
+    </script>
+  </body>
+</html>

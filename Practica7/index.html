@@ -1,0 +1,202 @@
+<!-- Autor: Eduardo Maximiliano Cedomio Marin -->
+<!-- Fecha de creacion: 12/10/2026 -->
+
+<!-- Declaracion del tipo de documento como HTML5 -->
+<!doctype html>
+<!-- Etiqueta raiz del documento, con el idioma configurado en ingles -->
+<html lang="en">
+  <head>
+    <!-- Codificacion de caracteres para admitir acentos y simbolos especiales -->
+    <meta charset="UTF-8" />
+    <!-- Configuracion para que el diseño sea adaptable a dispositivos moviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Clarity+City:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Titulo de la pagina que se muestra en la pestaña del navegador -->
+    <title>Practica 7</title>
+    <style>
+      body {
+        font-family: "Clarity City", sans-serif;
+        font-family: "Syne", sans-serif;
+        background-color: #ebecf1;
+        margin: 0;
+        padding: 10px 5px;
+      }
+      h1,
+      h4 {
+        font-family: "Rubik", sans-serif;
+        text-align: center;
+      }
+      table {
+        border-collapse: collapse;
+        background: #fff;
+        border-radius: 15px;
+        border: 1px solid gray;
+        min-width: 900px; /* Asegura que la tabla mantenga sus 3 columnas amplias */
+      }
+      main {
+        width: 100%;
+        max-width: 1000px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+      }
+      td {
+        width: 300px;
+        padding: 10px 15px;
+        border: 1px solid gray;
+      }
+      main > a {
+        background: #684cff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #fff;
+        margin-top: 15px;
+      }
+
+      /* Contenedor optimizado para permitir scroll horizontal sin recortar el inicio */
+      .table-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-top: 10px;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: flex-start; /* Permite empezar la visualización desde la primera columna */
+      }
+      img {
+        width: 140px;
+      }
+
+      /* ==========================================
+         MEDIA QUERIES PARA ADAPTACIÓN A TELÉFONOS
+         ================================---------- */
+
+      /* 1. Pantallas medianas / tablets pequeñas (hasta 768px) */
+      @media (max-width: 768px) {
+        body {
+          background-color: #e2e4ed;
+        }
+        h1 {
+          font-size: 24px;
+        }
+        table {
+          font-size: 12px;
+        }
+        table {
+          min-width: auto;
+        }
+      }
+
+      /* 2. Pantallas de teléfonos móviles pequeños (hasta 480px) */
+      @media (max-width: 480px) {
+        body {
+          background-color: #d6d9ea;
+        }
+        h1 {
+          font-size: 20px;
+          color: #4b35ef;
+        }
+        .table-container {
+          justify-content: flex-start; /* Garantiza que arranqué desde la izquierda (ChatGPT) */
+        }
+        table {
+          font-size: 8px;
+        }
+        td {
+          padding: 5px 7px;
+        }
+        img {
+          width: 80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Contenedor para el titulo principal y el nombre del autor -->
+    <div>
+      <!-- Titulo principal de la pagina (Encabezado 1) -->
+      <h1>Aplicaciones de la IA <br />Modelos</h1>
+      <h4>Cedomio Marin Eduardo Maximiliano</h4>
+    </div>
+
+    <!-- Contenedor principal -->
+    <main>
+      <!-- Contenedor con scroll horizontal corregido -->
+      <div class="table-container">
+        <!-- Tabla para organizar la informacion de las aplicaciones en columnas y filas -->
+        <table>
+          <!-- Primera fila (tr): Contiene las imagenes (logos) de las aplicaciones -->
+          <tr>
+            <!-- Celda (td) con el logo de ChatGPT -->
+            <td>
+              <img src="./1.png" alt="ChatGPT" />
+            </td>
+            <!-- Celda con el logo de Gemini -->
+            <td>
+              <img src="./2.png" alt="Gemini" />
+            </td>
+            <!-- Celda con el logo de Copilot -->
+            <td>
+              <img src="./3.png" alt="Copilot" />
+            </td>
+          </tr>
+          <!-- Segunda fila: Contiene los nombres de cada aplicacion -->
+          <tr>
+            <td>ChatGPT</td>
+            <td>Google Gemini</td>
+            <td>Microsoft Copilot</td>
+          </tr>
+          <tr>
+            <td><a href="https://chatgpt.com/">https://chatgpt.com/</a></td>
+            <td>
+              <a href="https://gemini.google.com/"
+                >https://gemini.google.com/</a
+              >
+            </td>
+            <td>
+              <a href="https://copilot.microsoft.com/"
+                >https://copilot.microsoft.com/</a
+              >
+            </td>
+          </tr>
+          <!-- Tercera fila: Contiene las descripciones detalladas de cada IA -->
+          <tr>
+            <td>
+              Asistente de inteligencia artificial de OpenAI para conversar,
+              redactar, estudiar, planificar, programar, resolver problemas y
+              analizar imágenes o archivos. Está diseñado para seguir
+              instrucciones dentro de una conversación.
+            </td>
+            <td>
+              Asistente de inteligencia artificial de Google que ayuda a
+              escribir, aprender, planificar, resumir información, generar ideas
+              y trabajar con distintos tipos de contenido. Se integra con el
+              ecosistema de Google.
+            </td>
+            <td>
+              Asistente digital con inteligencia artificial de Microsoft. Puede
+              responder preguntas, resumir información, apoyar la escritura,
+              generar imágenes y ayudar en tareas cotidianas; además, cuenta con
+              integración en varios productos de Microsoft.
+            </td>
+          </tr>
+          <tr>
+            <td>Modelos que maneja: GPT-5.3, GPT-5.3 Thinking y GPT-5.5 Pro</td>
+            <td>Modelos que maneja: Gemini Flash / Gemini Pro / Gemini Nano</td>
+            <td>Modelos que maneja: OpenAI, Anthropic y Microsoft</td>
+          </tr>
+        </table>
+      </div>
+      <br />
+      <a href="/more-info.html"> ¿Deseas más información? </a>
+    </main>
+  </body>
+</html>

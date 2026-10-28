@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica 4</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <center>
+        <h3>Formulario de registro</h3>
+        <h1>Reservaciones</h1>
+        <h2>Cedomio Marin Eduardo Maximiliano</h2>
+      </center>
+      <br /><br />
+      <center>
+        <table>
+          <tbody>
+            <tr>
+              <td>Ingresa tu Nombre:</td>
+              <td><input type="text" /></td>
+            </tr>
+            <tr>
+              <td>Ingresa tu Apellido:</td>
+              <td><input type="text" /></td>
+            </tr>
+            <tr>
+              <td>Ingresa tu edad:</td>
+              <td><input type="text" /></td>
+            </tr>
+            <tr>
+              <td>Ingresa tu correo:</td>
+              <td><input type="email" /></td>
+            </tr>
+            <tr>
+              <td>Ingresa tu genero:</td>
+              <td>
+                <input type="radio" name="Masculino" id="" />M
+                <input type="radio" name="Femenino" id="" />F
+              </td>
+            </tr>
+
+            <tr />
+            <tr>
+              <td>Ingresa tema de interes:</td>
+              <td>
+                <input
+                  type="checkbox"
+                  name="pasatiempo"
+                  value="computacion"
+                />Computacion
+                <input
+                  type="checkbox"
+                  name="pasatiempo"
+                  value="negocios"
+                />Negocios
+                <input type="checkbox" name="pasatiempo" value="juegos" />Juegos
+                <input type="checkbox" name="pasatiempo" value="viajes" />Viajes
+              </td>
+            </tr>
+            <tr>
+              <td>Ingresa tu civil:</td>
+              <td>
+                <select name="edo_civil" id="">
+                  <option value="casado">Casado/a</option>
+                  <option value="soltero">soltero/a</option>
+                  <option value="divorciado">divorciado/a</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Ingresa contraseña</td>
+              <td><input type="password" /><br /></td>
+            </tr>
+            <tr>
+              <td>Algun Comentario</td>
+              <td>
+                <textarea name="Comentario" id=""></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="submit" value="Enviar datos" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+    </main>
+  </body>
+</html>

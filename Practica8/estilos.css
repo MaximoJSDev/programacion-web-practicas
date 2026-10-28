@@ -1,0 +1,243 @@
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --text: #1d2530;
+  --muted: #5d6877;
+  --accent: #2f6fed;
+  --line: #dde2e8;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  line-height: 1.6;
+}
+
+/* Menú horizontal (index.html) */
+.menu-top {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+.menu-top ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 16px;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+}
+.menu-top a {
+  display: block;
+  padding: 16px 18px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.menu-top a:hover {
+  color: var(--accent);
+}
+
+/* Menú vertical (portafolio.html) */
+.menu-lateral {
+  width: 190px;
+  background: var(--surface);
+  border-right: 1px solid var(--line);
+  padding: 16px 0;
+}
+.menu-lateral h3 {
+  margin: 0 20px 8px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.menu-lateral ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-lateral a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--text);
+  text-decoration: none;
+}
+.menu-lateral a:hover {
+  background: var(--bg);
+  color: var(--accent);
+}
+
+/* Contenido de las páginas internas */
+.contenido {
+  padding: 32px;
+}
+.contenido h1 {
+  margin-top: 0;
+}
+.contenido p {
+  max-width: 60ch;
+}
+
+/* ---------- Páginas Inicio, Sobre mí y Contacto ---------- */
+.pagina {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.hero,
+.tarjeta {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.hero {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 28px;
+}
+.hero h1 {
+  margin: 0 0 4px;
+}
+.hero p {
+  margin: 0 0 8px;
+}
+.rol {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.boton {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--surface);
+  text-decoration: none;
+  font-weight: 600;
+}
+.boton.sec {
+  background: transparent;
+  color: var(--accent);
+}
+.boton:hover {
+  opacity: 0.85;
+}
+
+.tarjeta {
+  padding: 22px 24px;
+  margin-top: 20px;
+}
+.tarjeta h2 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.tarjeta h3 {
+  margin: 18px 0 2px;
+  font-size: 1.05rem;
+}
+.tarjeta h3:first-of-type {
+  margin-top: 0;
+}
+.tarjeta p {
+  margin: 0 0 8px;
+}
+.tarjeta a {
+  color: var(--accent);
+}
+.fecha {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0 0 6px;
+}
+
+.etiquetas {
+  list-style: none;
+  padding: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.etiquetas li {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 12px;
+  font-size: 0.9rem;
+}
+.columnas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.columnas .tarjeta {
+  margin-top: 20px;
+}
+
+/* Formulario de contacto */
+.formulario label {
+  display: block;
+  font-weight: 600;
+  margin: 14px 0 6px;
+}
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.formulario textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.formulario button {
+  margin-top: 18px;
+  padding: 11px 22px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--surface);
+}
+.formulario button:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .menu-lateral {
+    width: 110px;
+    font-size: 12px;
+  }
+}

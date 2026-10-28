@@ -1,0 +1,66 @@
+<!-- Nombre: Eduardo Maximiliano Cedomio Marin -->
+<!-- Programacion Web -->
+<!-- Hora: 8:00 - 9:00 -->
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica 10</title>
+
+    <!-- Importación de la fuente Roboto desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        /* Aplicando la fuente de Google Fonts */
+        font-family: "Roboto", sans-serif;
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        text-align: center;
+      }
+
+      .tarjeta-resultado {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        font-size: 24px;
+        color: #e74c3c;
+      }
+
+      .valor-negrita {
+        font-weight: 700; /* Usando el peso 700 de Roboto para las negritas */
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let a = prompt("Ingrese el valor de a: ");
+      let b = prompt("Ingrese el valor de b: ");
+      let resultado = parseInt(a) + parseInt(b);
+
+      console.log(resultado);
+
+      document.write(`
+        <div class="tarjeta-resultado">
+          El resultado de la suma de: 
+          <span class="valor-negrita">${a}</span> 
+          más 
+          <span class="valor-negrita">${b}</span> 
+          es:  
+          <span class="valor-negrita">${resultado}</span>
+        </div>
+      `);
+    </script>
+  </body>
+</html>

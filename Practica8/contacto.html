@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <main class="pagina">
+      <section class="tarjeta" style="margin-top: 0">
+        <h2>Contacto</h2>
+        <p>
+          ¿Tienes una pregunta, una propuesta o quieres colaborar? Escríbeme con
+          este formulario o usa directamente alguno de estos datos:
+        </p>
+      </section>
+
+      <section class="tarjeta">
+        <h2>Envíame un mensaje</h2>
+
+        <form
+          class="formulario"
+          action="mailto:maximilianocm06@gmail.com?subject=Mensaje%20desde%20mi%20portafolio"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="nombre">Nombre completo</label>
+          <input
+            type="text"
+            id="nombre"
+            name="Nombre completo"
+            autocomplete="name"
+            required
+          />
+
+          <label for="correo">Correo electrónico</label>
+          <input
+            type="email"
+            id="correo"
+            name="Correo"
+            autocomplete="email"
+            required
+          />
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="Mensaje" required></textarea>
+
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
