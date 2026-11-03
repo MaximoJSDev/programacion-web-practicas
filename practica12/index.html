@@ -1,0 +1,156 @@
+<!-- Eduardo Maximiliano Cedomio Marin
+Programacion Web
+Practica 12
+Hora: 8:00 a 9:00 -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sueldos de trabajadores</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 40px 20px;
+        background: #f3f4f6;
+        color: #1f2937;
+        font-family: Arial, sans-serif;
+      }
+
+      table {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0 2px 8px #00000014;
+      }
+
+      td,
+      th {
+        padding: 4px 14px;
+        border: 1px solid #d1d5db;
+        text-align: left;
+      }
+      th {
+        background: #3b82f6;
+        color: #fff;
+        padding-block: 12px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+
+        margin-bottom: 50px;
+        font-size: 18px;
+      }
+      label {
+        margin-bottom: 5px;
+      }
+      input {
+        font-size: 16px;
+        padding: 6px 12px;
+        margin-bottom: 10px;
+      }
+      button {
+        display: flex;
+        align-self: flex-start;
+        padding: 10px 18px;
+        background-color: rgb(77, 89, 108);
+        color: #fff;
+        border-radius: 8px;
+        border: none;
+      }
+      img {
+        width: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form">
+      <label for="nombre">Ingresa tu nombre:</label>
+      <input
+        name="nombre"
+        id="nombre"
+        type="text"
+        placeholder="Juan Bedolla"
+        required
+      />
+      <label for="rfc">Ingresa tu RFC:</label>
+      <input name="rfc" id="rfc" type="text" placeholder="RFC" required />
+      <label for="antiguedad">Ingresa tu antiguedad:</label>
+      <input
+        name="antiguedad"
+        id="antiguedad"
+        type="number"
+        placeholder="12 años"
+        required
+      />
+      <label for="dias">Ingresa tus dias trabajados:</label>
+      <input
+        name="dias"
+        id="dias"
+        type="number"
+        placeholder="10 dias laborados"
+        required
+      />
+      <button class="">Enviar datos</button>
+    </form>
+    <table border="1" id="tabla">
+      <tr>
+        <th>*</th>
+        <th>nombre</th>
+        <th>dias tabajados</th>
+        <th>Antiguedad</th>
+        <th>Tiene Bono</th>
+        <th>Bono</th>
+        <th>Sueldo total</th>
+        <th>Foto</th>
+      </tr>
+    </table>
+    <script>
+      const $form = document.querySelector(".form");
+      let id = 1;
+      $form.addEventListener("submit", (evt) => {
+        evt.preventDefault();
+        let form = new FormData($form);
+        console.log(form);
+        let nombre = form.get("nombre");
+        let antiguedad = Number(form.get("antiguedad"));
+        let dias_trabajados = Number(form.get("dias"));
+        let rfc = form.get("rfc");
+        let sueldo_base = 15000;
+        let bono = 1000;
+        let tiene_bono = "";
+        let sueldo_quincena = (sueldo_base / 15) * dias_trabajados;
+
+        if (antiguedad >= 10) {
+          tiene_bono = "si";
+          sueldo_quincena = sueldo_quincena + bono;
+        } else {
+          tiene_bono = "no";
+        }
+        document.getElementById("tabla").innerHTML += `
+              <tr>
+                  <td>${id}</td>
+                  <td>${nombre}</td>
+                  <td>${dias_trabajados}</td>
+                  <td>${antiguedad} años</td>
+                  <td>${tiene_bono}</td>
+                  <td>$ ${tiene_bono === "si" ? bono : "—"}</td>
+                  <td>$ ${sueldo_quincena}</td>
+                  <td>
+                    <img src="${rfc + ".jpeg"}" alt="Foto persona">
+                  </td>
+              </tr>`;
+        id += 1;
+      });
+    </script>
+  </body>
+</html>
