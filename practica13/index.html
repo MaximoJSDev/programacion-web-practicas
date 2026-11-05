@@ -1,0 +1,42 @@
+<!-- Eduardo Maximiliano Cedomio Marin
+Programacion Web
+Practica 13
+Hora: 8:00 a 9:00 -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica 13</title>
+  </head>
+  <body>
+    <script>
+      function suma(a, b) {
+        let resultado = a + b;
+        document.write(resultado);
+      }
+      function texto(cadena, color, size) {
+        document.write(
+          `<font size=${size} color=${color}><b>${cadena}</b></font>`,
+        );
+      }
+
+      function texto2(cadena, tam, color, tipografia) {
+        document.write(
+          `<h${tam} style="color: ${color}; font-family: ${tipografia};">${cadena}</h${tam}>`,
+        );
+      }
+
+      function salto() {
+        document.write(`<br>`);
+      }
+
+      suma(20, 10);
+      salto();
+      texto("Saludos a todos", "green", "7");
+      salto();
+      texto2("Saludos a todos", "2", "navy", "arial");
+    </script>
+  </body>
+</html>
