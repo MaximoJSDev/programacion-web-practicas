@@ -180,21 +180,6 @@ Hora: 8:00 a 9:00 -->
         $foto.alt = "Foto persona";
         $fila.cells[7].replaceChildren($foto);
 
-        /*
-        // Alternativa: reemplazar todo el <tr>, conservando su atributo name.
-        $fila.outerHTML = `
-          <tr name="persona-${id}">
-            <td>${id}</td>
-            <td>${nombre}</td>
-            <td>${dias_trabajados}</td>
-            <td>${antiguedad} años</td>
-            <td>${tiene_bono}</td>
-            <td>${tiene_bono === "si" ? `$ ${bono}` : "—"}</td>
-            <td>$ ${sueldo_quincena}</td>
-            <td><img src="${rfc}.jpeg" alt="Foto persona"></td>
-          </tr>`;
-        */
-
         id += 1;
       });
     </script>
